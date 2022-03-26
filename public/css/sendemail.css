@@ -1,0 +1,51 @@
+body{
+background-color: #f5f5f5;
+}
+.main-section{
+font-family: 'Roboto Condensed', sans-serif;
+position: absolute;
+left:50%;
+right:50%;
+transform: translate(-50%,30%);
+}
+.left-sidebar ul{
+list-style: none;
+}
+.left-sidebar ul li{
+width: 100%;
+padding:0px 0px;
+display: inline-block;
+border-bottom:1px solid #d2d2d2;
+}
+.left-sidebar ul li a:hover{
+background-color: #d2d2d2;
+color:red;
+}
+.left-sidebar ul li a{
+display: inline-block;
+width: 100% !important;
+color:#000;
+}
+.left-sidebar .badge{
+float:right;
+}
+.messege-right h1{
+font-size:18px;
+}
+.message-box-icon i{
+padding: 0px 3px;
+}
+.message-box-input .form-control{
+border-radius: unset;
+box-shadow: none;
+}
+.message-box-last-content{
+margin-top: -20px;
+border-top:2px solid #E5E5E5;
+background-color: #f5f5f5;
+width: 100%;
+}
+.message-box-last-content i{
+color:#404040;
+padding:0px 5px;
+}

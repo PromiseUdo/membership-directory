@@ -1,0 +1,15 @@
+<% if(success && success.length) { %>
+    <div style="margin:5px auto; width: 70%;" class="alert alert-success alert-dismissible fade in show" role="alert">
+        <%= success %>
+    </div>
+    <% } %>
+
+
+        <% if(error && error.length) { %>
+            <div style="margin:5px auto; width: 70%;" class="alert alert-danger alert-dismissible fade in show"
+                role="alert">
+                <%= error %>
+            </div>
+            <% } %>
+
+                <script src="/js/dismissalert.js"></script>
