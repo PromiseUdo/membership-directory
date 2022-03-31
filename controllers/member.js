@@ -32,7 +32,7 @@ module.exports.renderEdit = async (req, res) => {
       '.svg'
     res.render('users/editUser', { member, avatar })
   } catch (e) {
-    console.log(e)
+    // console.log(e)
   }
 }
 
@@ -41,7 +41,7 @@ module.exports.editMember = async (req, res) => {
     const { id } = req.params
     const member = await User.findByIdAndUpdate(id, { ...req.body })
 
-    res.redirect('/member/profile')
+    res.redirect('/app/member/profile')
   } catch (e) {
     console.log(e)
   }

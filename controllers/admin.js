@@ -20,7 +20,7 @@ module.exports.removeMember = async (req, res) => {
   try {
     const { id } = req.params
     const member = await User.findByIdAndDelete(id)
-    res.redirect('/admin/dashboard')
+    res.redirect('/app/admin/dashboard')
   } catch (e) {
     console.log(e)
   }
@@ -47,7 +47,7 @@ module.exports.sendEmail = async (req, res) => {
     emailString += `${user.email},`
   }
 
-  console.log(emailString)
+  // console.log(emailString)
 
   //send email to the users
   const transporter = nodemailer.createTransport(
@@ -70,10 +70,10 @@ module.exports.sendEmail = async (req, res) => {
 
   await transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error)
+      // console.log(error)
     } else {
-      console.log('Email sent: ')
-      res.redirect('/admin/dashboard')
+      // console.log('Email sent: ')
+      res.redirect('/app/admin/dashboard')
     }
   })
 }

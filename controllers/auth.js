@@ -9,6 +9,10 @@ module.exports.renderSignUp = (req, res) => {
   res.render('auth/signup')
 }
 
+module.exports.renderSignIn = (req, res) => {
+  res.render('auth/signin')
+}
+
 module.exports.renderAdminSignUp = (req, res) => {
   res.render('admin/signup')
 }
@@ -67,7 +71,7 @@ module.exports.createNewUser = async (req, res) => {
     httpOnly: true,
   })
   if (req.path === '/si-gn-up') {
-    res.redirect('/admin/dashboard')
+    res.redirect('/app/admin/dashboard')
   } else {
     //send email to the user
     const transporter = nodemailer.createTransport(
@@ -93,7 +97,7 @@ module.exports.createNewUser = async (req, res) => {
       else console.log('Email sent: ')
     })
 
-    return res.redirect('/member/profile')
+    return res.redirect('/app/member/profile')
   }
 }
 
@@ -104,14 +108,14 @@ module.exports.signin = async (req, res) => {
   const user = await User.findOne({ email })
   if (!user) {
     req.flash('error', 'Invalid Credentials. Please try again!')
-    return res.redirect('/')
+    return res.redirect('/app/auth/signin')
   }
 
   //validate the password
   const isMatch = await bcrypt.compare(password, user.password)
   if (!isMatch) {
     req.flash('error', 'Invalid Credentials. Please try again!')
-    return res.redirect('/')
+    return res.redirect('/app/auth/signin')
 
     // return res.status(422).json({ errors: [{ msg: 'Invalid credentials' }] })
   }
@@ -135,12 +139,12 @@ module.exports.signin = async (req, res) => {
     httpOnly: true,
   })
 
-  console.log(user.role, 'hjhjh')
+  // console.log(user.role, 'hjhjh')
 
   if (req.path === '/si-gn-in' && user.role === 'admin') {
-    return res.redirect('/admin/dashboard')
+    return res.redirect('/app/admin/dashboard')
   } else {
-    return res.redirect('/member/profile')
+    return res.redirect('/app/member/profile')
   }
 }
 

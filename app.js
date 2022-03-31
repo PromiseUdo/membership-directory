@@ -19,8 +19,8 @@ const authRoutes = require('./routes/auth')
 const memberRoutes = require('./routes/member')
 
 //connection with database
-// mongoose.connect('mongodb://localhost:27017/membership', {
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb://localhost:27017/membership', {
+// mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   // useCreateIndex:true,
   // useUnifiedTopology: true,
@@ -74,12 +74,12 @@ app.use((req, res, next) => {
 })
 
 //middleware to use the routes
-app.use('/admin', adminRoutes)
-app.use('/auth', authRoutes)
-app.use('/member', memberRoutes)
+app.use('/app/admin', adminRoutes)
+app.use('/app/auth', authRoutes)
+app.use('/app/member', memberRoutes)
 
 app.get('/', (req, res) => {
-  res.render('auth/signin')
+  res.render('index')
 })
 
 app.get('*', (req, res) => {
@@ -89,7 +89,7 @@ app.get('*', (req, res) => {
 let port = process.env.PORT
 
 if (port == null || port == '') {
-  port = 5000
+  port = 3000
 }
 
 app.listen(port, () => {

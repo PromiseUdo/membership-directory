@@ -50,7 +50,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/admin/dashboard">
+                <a class="nav-link" href="/app/admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -73,7 +73,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage members:</h6>
-                        <a class="collapse-item" href="/admin/dashboard">View Members</a>
+                        <a class="collapse-item" href="/app/admin/dashboard">View Members</a>
                     </div>
                 </div>
             </li>
@@ -89,7 +89,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="/admin/dashboard/send_email">Email Members</a>
+                        <a class="collapse-item" href="/app/admin/dashboard/send_email">Email Members</a>
                     </div>
                 </div>
             </li>
@@ -104,7 +104,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin/si-gn-in">
+                <a class="nav-link" href="/app/admin/si-gn-in">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Logout</span></a>
             </li>
@@ -396,7 +396,7 @@
                                                                     </div>
                                                         
                                                                     <!-- Delete Admin Form -->
-                                                                    <form action="/admin/remove_member/<%= member._id %>?_method=DELETE" method="POST"
+                                                                    <form action="/app/admin/remove_member/<%= member._id %>?_method=DELETE" method="POST"
                                                                         class="admin-delete">
                                                                         <div class="modal-body p-4">
                                                                             <p>Are you sure you want to remove 
