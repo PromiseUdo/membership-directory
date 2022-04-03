@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
   },
+  fullname: {
+    type: String,
+  },
+
   firstname: {
     type: String,
   },
@@ -36,6 +40,9 @@ const userSchema = new mongoose.Schema({
     type: String,
   },
   lga: {
+    type: String,
+  },
+  ward: {
     type: String,
   },
 })

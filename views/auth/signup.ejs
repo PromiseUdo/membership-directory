@@ -45,14 +45,11 @@
                             </div>
                             <form action="/app/auth/signup" method="post" class="user">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input name="firstname" type="text" class="form-control" id="exampleFirstName"
-                                            placeholder="First Name">
+                                    <div class="col-sm-12 mb-6 mb-sm-0">
+                                        <input name="fullname" type="text" class="form-control" id="exampleFirstName"
+                                            placeholder="Full Name">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input name="lastname" type="text" class="form-control" id="exampleLastName"
-                                            placeholder="Last Name">
-                                    </div>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <input name="email" type="email" class="form-control" id="exampleInputEmail"
@@ -69,23 +66,31 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
                                         <select name="country" class="countries form-control" id="countryId">
                                             <option value="">Select Country</option>
                                        
                                         </select>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <select name="state" class="states form-control" id="stateId">
                                             <option value="">Select State</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-4">
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
                                         <select name="lga" class="cities form-control" id="cityId">
-                                            <option value="">Select City</option>
+                                            <option value="">Select LGA</option>
                                         </select>
                                     </div>
+
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" name="ward" id="" placeholder="Enter Ward">
+                                    </div>
                                 </div>
+                                
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </button>
@@ -102,7 +107,7 @@
                                 <a class="small" href="#">Forgot Password?</a>
                             </div> -->
                             <div class="text-center">
-                                <a class="small" href="/">Already have an account? Login!</a>
+                                <a class="small" href="/app/auth/signin">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

@@ -32,9 +32,9 @@
                     
                     <img src="<%=avatar%>" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4><%=member.firstname%> <%=member.lastname%></h4>
+                      <h4><%=member.fullname%></h4>
                       <p class="text-secondary mb-1"><%=member.uniqueID%></p>
-                      <p class="text-muted font-size-sm"><%=member.state%>, <%=member.lga%></p>
+                      <p class="text-muted font-size-sm"><%=member.state%>, <%=member.lga%>, <%=member.ward%></p>
                         <img src="https://img.icons8.com/color/48/000000/verified-account.png" /> <span>Member NP2023</span>
                     </div>
                   </div>
@@ -50,7 +50,8 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                       <%=member.firstname%> <%=member.lastname%>
+
+                       <%=member.fullname%>
                     </div>
                   </div>
                   <hr>
@@ -96,6 +97,15 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                       <%=member.lga%>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Ward</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%=member.ward%>
                     </div>
                   </div>
                   <hr>

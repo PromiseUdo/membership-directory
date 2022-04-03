@@ -19,8 +19,8 @@ const authRoutes = require('./routes/auth')
 const memberRoutes = require('./routes/member')
 
 //connection with database
-// mongoose.connect('mongodb://localhost:27017/membership', {
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb://localhost:27017/membership', {
+// mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   // useCreateIndex:true,
   // useUnifiedTopology: true,

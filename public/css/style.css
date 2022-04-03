@@ -104,7 +104,7 @@ img {
 }
 
 .pb-70 {
-    padding-bottom: 70px; #25D366
+    padding-bottom: 70px; 
 }
 
 .pb-85 {
@@ -1692,4 +1692,15 @@ input:-webkit-autofill {
 
 .copyright-text a:hover {
     color: #007bff;
+}
+
+
+#footer-fb, #footer-twitter, #footer-instagram{
+    color: white;
+    margin-right: 20px;
+    
+}
+
+#footer-fb:hover, #footer-twitter:hover, #footer-instagram:hover{
+    color:#ccc
 }
